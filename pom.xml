@@ -30,7 +30,6 @@
         <module>hospital-persistence</module>
     </modules>
 
-
     <dependencies>
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
@@ -82,6 +81,10 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+
+    </dependencyManagement>
 
     <build>
         <plugins>
