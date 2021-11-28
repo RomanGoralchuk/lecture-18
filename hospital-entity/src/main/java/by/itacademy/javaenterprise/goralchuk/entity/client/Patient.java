@@ -15,9 +15,11 @@ import java.util.Date;
 @Table(name = "patient")
 public class Patient extends Client {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long patientIdCardNumber;
-/*    private SickLeave sickLeave;*/
+/*    @OneToMany
+    private SickLeave sickLeave;*/
     private LifeStatus lifeStatus;
 
     public Patient(String name, String surname, Gender gender, Date birthday, Long patientIdCardNumber, SickLeave sickLeave, LifeStatus lifeStatus) {

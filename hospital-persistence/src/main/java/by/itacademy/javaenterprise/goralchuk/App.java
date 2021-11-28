@@ -20,9 +20,6 @@ public class App {
 
             PatientDaoImpl patientDao = new PatientDaoImpl(entityManager);
             patientDao.save(new Patient());
-            patientDao.save(new Patient());
-            patientDao.save(new Patient());
-            patientDao.save(new Patient());
 
         } catch (StackOverflowError  e) {
             logger.error(e.getMessage(), e);
