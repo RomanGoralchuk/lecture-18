@@ -130,10 +130,10 @@
                     <user>user</user>
                     <password>userpass</password>
                     <schemas>
-                        <schema>hibernateTest</schema>
+                        <schema>hospital</schema>
                     </schemas>
                     <locations>
-                        <location>filesystem:src/main/resources/database/migration</location>
+                        <location>classpath:database/migration</location>
                     </locations>
                 </configuration>
             </plugin>

@@ -1,4 +1,4 @@
-package entity.other;
+package entity.documents;
 
 import entity.client.Patient;
 import entity.personal.Doctor;

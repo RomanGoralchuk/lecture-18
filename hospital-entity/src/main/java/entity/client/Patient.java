@@ -1,6 +1,6 @@
 package entity.client;
 
-import entity.other.SickLeave;
+import entity.documents.SickLeave;
 
 public class Patient extends Client {
     private SickLeave sickLeave;

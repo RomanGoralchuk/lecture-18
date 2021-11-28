@@ -1,4 +1,4 @@
-package entity.other;
+package entity.documents;
 
 public class ProphylacticLeave extends Document {
     private Long numberProphylacticLeave;
