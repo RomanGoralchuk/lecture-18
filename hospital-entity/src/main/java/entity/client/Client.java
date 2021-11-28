@@ -1,7 +1,5 @@
 package entity.client;
 
-import entity.client.util.Gender;
-
 import java.util.Date;
 
 public abstract class Client {

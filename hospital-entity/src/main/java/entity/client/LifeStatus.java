@@ -1,4 +1,4 @@
-package entity.client.util;
+package entity.client;
 
 public enum LifeStatus {
 

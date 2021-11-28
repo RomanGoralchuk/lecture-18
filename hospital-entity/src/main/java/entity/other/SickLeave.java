@@ -1,7 +1,6 @@
 package entity.other;
 
 import entity.client.Patient;
-import entity.other.util.Diagnosis;
 import entity.personal.Doctor;
 
 import java.util.Date;

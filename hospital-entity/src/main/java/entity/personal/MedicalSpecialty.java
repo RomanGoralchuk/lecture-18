@@ -1,4 +1,4 @@
-package entity.personal.util;
+package entity.personal;
 
 public enum MedicalSpecialty {
 }

@@ -1,4 +1,4 @@
-package entity.other.util;
+package entity.other;
 
 public enum Diagnosis {
 
