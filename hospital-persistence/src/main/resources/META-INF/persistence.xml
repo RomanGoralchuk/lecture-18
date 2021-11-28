@@ -5,14 +5,15 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
     <persistence-unit name="hospital" transaction-type="RESOURCE_LOCAL">
-
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>by.itacademy.javaenterprise.goralchuk.entity.client.Patient</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
 
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
-
             <property name="javax.persistence.jdbc.driver"
                       value="org.mariadb.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url"
@@ -21,6 +22,7 @@
                       value="user" />
             <property name="javax.persistence.jdbc.password"
                       value="userpass" />
+
         </properties>
     </persistence-unit>
 </persistence>

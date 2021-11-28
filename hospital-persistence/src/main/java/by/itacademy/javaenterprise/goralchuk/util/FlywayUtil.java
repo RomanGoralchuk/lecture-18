@@ -20,7 +20,7 @@ public final class FlywayUtil {
     public static void updateMigration() {
         try {
             flyway.migrate();
-            logger.info("Migrations was up to date successfully");
+            logger.debug("Migrations was up to date successfully");
         } catch (FlywayException e) {
             logger.error(e.toString(), e);
             logger.info("Test links:" +
@@ -35,7 +35,7 @@ public final class FlywayUtil {
     public static void cleanMigration() {
         try {
             flyway.clean();
-            logger.info("Migrations was up to date successfully");
+            logger.debug("Migrations was up to date successfully");
         } catch (FlywayException e) {
             logger.error(e.toString(), e);
         }

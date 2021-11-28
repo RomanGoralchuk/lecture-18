@@ -28,11 +28,11 @@ public enum Gender {
         private static final Logger logger = LoggerFactory.getLogger(GenderConverter.class);
 
         @Override
-        public String convertToDatabaseColumn(Gender petType) {
-            if (petType == null) {
+        public String convertToDatabaseColumn(Gender gender) {
+            if (gender == null) {
                 return null;
             }
-            return petType.getCode();
+            return gender.getCode();
         }
 
         @Override
