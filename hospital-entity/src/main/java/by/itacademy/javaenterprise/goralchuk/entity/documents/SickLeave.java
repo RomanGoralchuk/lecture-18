@@ -1,7 +1,7 @@
-package entity.documents;
+package by.itacademy.javaenterprise.goralchuk.entity.documents;
 
-import entity.client.Patient;
-import entity.personal.Doctor;
+import by.itacademy.javaenterprise.goralchuk.entity.client.Patient;
+import by.itacademy.javaenterprise.goralchuk.entity.personal.Doctor;
 
 import java.util.Date;
 

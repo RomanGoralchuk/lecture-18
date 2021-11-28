@@ -9,7 +9,7 @@ Hibernate. Data storage methods and data matching
    3.2. persistence module +
    3.3. (optinal) integration test module +
    3.4. naming: {project-name}-persistence. examples: school-journal-persistence, car-service-entity, etc +
-4. Create POJO classes
+4. Create POJO classes +
 5. Use at least 4 class level annotations (for example embedded, immutable, and so on)
 6. Use at least 5 field level annotations (for example, transient)
 7. Use at least 2 diff id generation strategy

@@ -1,4 +1,4 @@
-package entity.client;
+package by.itacademy.javaenterprise.goralchuk.entity.client;
 
 import java.util.Date;
 

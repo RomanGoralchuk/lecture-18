@@ -26,8 +26,8 @@
 
     <modules>
         <module>hospital-entity</module>
-        <module>hospital-integration-test</module>
         <module>hospital-persistence</module>
+        <module>hospital-integration-test</module>
     </modules>
 
     <dependencies>
@@ -35,12 +35,6 @@
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
             <version>${mariadb-java-client.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${projectlombok.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.flywaydb</groupId>
@@ -67,23 +61,30 @@
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.core.version}</version>
         </dependency>
-        <!--tests-->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito-core.version}</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
-
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${projectlombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--tests-->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito-core.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
     <build>
@@ -116,7 +117,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
-                            <mainClass>by.itacademy.javaenterprise.goralchuk.App</mainClass>
+                            <mainClass>by/itacademy/javaenterprise/goralchuk/App.java</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
