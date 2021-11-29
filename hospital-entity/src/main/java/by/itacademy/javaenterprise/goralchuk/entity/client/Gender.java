@@ -22,7 +22,7 @@ public enum Gender {
         return code;
     }
 
-    @Converter(autoApply = true)
+    @Converter
     public static class GenderConverter
             implements AttributeConverter<Gender, String> {
         private static final Logger logger = LoggerFactory.getLogger(GenderConverter.class);

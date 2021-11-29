@@ -20,7 +20,7 @@ public class Patient extends Client {
     @SequenceGenerator( name = "patientSequence", sequenceName = "PATIENT_SEQUENCE", allocationSize = 1, initialValue = 1)
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "patientSequence")
     private Long patientIdCardNumber;
-    @Column(name = "lifeStatus")
+    @Convert(converter = LifeStatus.LifeStatusConverter.class)
     private LifeStatus lifeStatus;
 
     public Patient(String name, String surname, Gender gender, Date birthday, Long patientIdCardNumber, LifeStatus lifeStatus) {

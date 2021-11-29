@@ -16,6 +16,7 @@ import java.util.Date;
 public abstract class Client {
     private String name;
     private String surname;
+    @Convert(converter = Gender.GenderConverter.class)
     private Gender gender;
     @Temporal(TemporalType.DATE)
     private Date birthday;

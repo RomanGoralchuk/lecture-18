@@ -20,7 +20,7 @@ public enum LifeStatus {
         return code;
     }
 
-    @Converter(autoApply = true)
+    @Converter
     public static class LifeStatusConverter
             implements AttributeConverter<LifeStatus, String> {
         private static final Logger logger = LoggerFactory.getLogger(LifeStatusConverter.class);
