@@ -11,24 +11,21 @@ import java.util.Date;
 
 @Getter
 @Setter
-@Entity
 @NoArgsConstructor
+@Entity
 @Table(name = "patient")
 public class Patient extends Client {
     @Id
-/*    @GeneratedValue(strategy = GenerationType.IDENTITY)*/
     @Column(name = "id")
     @SequenceGenerator( name = "patientSequence", sequenceName = "PATIENT_SEQUENCE", allocationSize = 1, initialValue = 1)
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "patientSequence")
     private Long patientIdCardNumber;
-/*    @OneToMany
-    private SickLeave sickLeave;*/
+    @Column(name = "lifeStatus")
     private LifeStatus lifeStatus;
 
-    public Patient(String name, String surname, Gender gender, Date birthday, Long patientIdCardNumber, SickLeave sickLeave, LifeStatus lifeStatus) {
+    public Patient(String name, String surname, Gender gender, Date birthday, Long patientIdCardNumber, LifeStatus lifeStatus) {
         super(name, surname, gender, birthday);
         this.patientIdCardNumber = patientIdCardNumber;
-/*        this.sickLeave = sickLeave;*/
         this.lifeStatus = lifeStatus;
     }
 
@@ -37,8 +34,7 @@ public class Patient extends Client {
         return "Patient{" +
                 "ID=" + patientIdCardNumber +
                 super.toString() +
-/*                ", sickLeave=" + sickLeave +*/
-                ", lifeStatus=" + lifeStatus +
+                ", lifeStatus=" + lifeStatus.getCode() +
                 '}';
     }
 }
