@@ -4,6 +4,7 @@ import by.itacademy.javaenterprise.goralchuk.entity.documents.SickLeave;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -15,8 +16,10 @@ import java.util.Date;
 @Table(name = "patient")
 public class Patient extends Client {
     @Id
+/*    @GeneratedValue(strategy = GenerationType.IDENTITY)*/
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator( name = "patientSequence", sequenceName = "PATIENT_SEQUENCE", allocationSize = 1, initialValue = 1)
+    @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "patientSequence")
     private Long patientIdCardNumber;
 /*    @OneToMany
     private SickLeave sickLeave;*/

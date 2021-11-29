@@ -7,13 +7,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 public class PatientDaoImpl implements PatientDao {
     private static final Logger logger = LoggerFactory.getLogger(PatientDaoImpl.class);
 
-    @PersistenceContext
     private EntityManager entityManager;
 
     public PatientDaoImpl(EntityManager em) {

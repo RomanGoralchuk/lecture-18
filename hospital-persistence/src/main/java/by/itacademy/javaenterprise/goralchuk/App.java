@@ -19,6 +19,9 @@ public class App {
             FlywayUtil.updateMigration();
 
             PatientDaoImpl patientDao = new PatientDaoImpl(entityManager);
+
+            patientDao.save(new Patient());
+            patientDao.save(new Patient());
             patientDao.save(new Patient());
 
         } catch (StackOverflowError  e) {
