@@ -1,6 +1,7 @@
 package by.itacademy.javaenterprise.goralchuk.entity.client;
 
 import lombok.*;
+import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -16,12 +17,15 @@ public abstract class Client {
     private Gender gender;
     @Temporal(TemporalType.DATE)
     private Date birthday;
+    @Formula(value ="SELECT DATEDIFF(CURDATE(), birthday)")
+    private int age;
 
     @Override
     public String toString() {
-        return ", name='" + name +
+        return "\nname='" + name +
                 "', surname='" + surname +
-                "', gender=" + gender.getCode() +
-                ", birthday=" + birthday;
+                "', gender=" + gender +
+                ", birthday=" + birthday +
+                ", age=" + age;
     }
 }
