@@ -8,6 +8,8 @@ CREATE TABLE patient (
 	PRIMARY KEY (id) USING BTREE
 );
 
+ALTER TABLE patient ALTER lifeStatus SET DEFAULT 'alive';
+
 CREATE TABLE prophylactic (
     id BIGINT NOT NULL AUTO_INCREMENT,
     name CHAR(50) NULL DEFAULT NULL,

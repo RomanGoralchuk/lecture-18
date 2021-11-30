@@ -1,16 +1,12 @@
 package by.itacademy.javaenterprise.goralchuk.entity.client;
 
-import by.itacademy.javaenterprise.goralchuk.entity.documents.SickLeave;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @Entity
 @Table(name = "patient")
@@ -21,7 +17,7 @@ public class Patient extends Client {
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "patientSequence")
     private Long patientIdCardNumber;
     @Convert(converter = LifeStatus.LifeStatusConverter.class)
-    private LifeStatus lifeStatus;
+    private LifeStatus lifeStatus = LifeStatus.ALIVE;
 
     public Patient(String name, String surname, Gender gender, Date birthday, Long patientIdCardNumber, LifeStatus lifeStatus) {
         super(name, surname, gender, birthday);

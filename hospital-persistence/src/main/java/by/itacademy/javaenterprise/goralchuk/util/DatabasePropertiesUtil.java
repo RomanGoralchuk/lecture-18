@@ -14,6 +14,7 @@ public final class DatabasePropertiesUtil {
     public static final String USER = getProperties("db.username");
     public static final String USERPASS = getProperties("db.password");
     public static final String LOCATIONMIGRATION = getProperties("db.locations");
+
     private static final String PROPERTYFILENAME = "database/database.properties";
 
     private static String getProperties(String str) {

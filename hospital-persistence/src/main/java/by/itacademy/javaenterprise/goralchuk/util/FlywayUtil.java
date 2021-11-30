@@ -23,7 +23,7 @@ public final class FlywayUtil {
             logger.debug("Migrations was up to date successfully");
         } catch (FlywayException e) {
             logger.error(e.toString(), e);
-            logger.info("Test links:" +
+            logger.debug("Test links:" +
                     "\n   " + DatabasePropertiesUtil.URL +
                     "\n   " + DatabasePropertiesUtil.USER +
                     "\n   " + DatabasePropertiesUtil.USERPASS +
