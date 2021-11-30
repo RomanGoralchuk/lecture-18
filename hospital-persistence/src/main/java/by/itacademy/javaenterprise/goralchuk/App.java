@@ -2,7 +2,9 @@ package by.itacademy.javaenterprise.goralchuk;
 
 import by.itacademy.javaenterprise.goralchuk.dao.impl.PatientDaoImpl;
 import by.itacademy.javaenterprise.goralchuk.dao.impl.ProphylacticDaoImpl;
+import by.itacademy.javaenterprise.goralchuk.dao.impl.ProphylacticLeaveDaoImpl;
 import by.itacademy.javaenterprise.goralchuk.entity.client.*;
+import by.itacademy.javaenterprise.goralchuk.entity.documents.ProphylacticLeave;
 import by.itacademy.javaenterprise.goralchuk.util.FlywayUtil;
 import by.itacademy.javaenterprise.goralchuk.util.HibernateUtil;
 import org.slf4j.Logger;
@@ -45,6 +47,12 @@ public class App {
 
             logger.info("{}", prophylacticDao.find(1L));
             logger.info("{}", prophylacticDao.find(2L));
+
+            ProphylacticLeaveDaoImpl prophylacticLeaveDao = new ProphylacticLeaveDaoImpl(entityManager);
+
+            prophylacticLeaveDao.save(new ProphylacticLeave());
+            prophylacticLeaveDao.save(new ProphylacticLeave());
+            prophylacticLeaveDao.save(new ProphylacticLeave());
 
         } catch (StackOverflowError  e) {
             logger.error(e.getMessage(), e);

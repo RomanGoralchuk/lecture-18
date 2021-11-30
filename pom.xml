@@ -18,7 +18,7 @@
         <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
         <flyway-core.version>8.0.5</flyway-core.version>
         <logback.version>1.2.7</logback.version>
-        <hibernate.core.version>5.6.1.Final</hibernate.core.version>
+        <hibernate.version>5.6.1.Final</hibernate.version>
         <slf4j.version>1.7.32</slf4j.version>
         <junit.version>4.13.2</junit.version>
         <mockito-core.version>4.0.0</mockito-core.version>
@@ -59,7 +59,12 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.core.version}</version>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
         </dependency>
     </dependencies>
 

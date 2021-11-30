@@ -19,6 +19,8 @@ public abstract class Client {
     private Date birthday;
     @Formula(value ="SELECT DATEDIFF(CURDATE(), birthday)")
     private int age;
+    @Transient
+    private String password;
 
     @Override
     public String toString() {

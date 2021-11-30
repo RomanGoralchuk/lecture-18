@@ -1,0 +1,6 @@
+CREATE TABLE prophylacticLeave (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    idCard CHAR(50) NULL DEFAULT NULL,
+    description CHAR(50) NULL DEFAULT NULL,
+    PRIMARY KEY (id) USING BTREE
+);

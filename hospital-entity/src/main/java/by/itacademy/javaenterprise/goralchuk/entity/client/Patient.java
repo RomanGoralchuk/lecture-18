@@ -14,10 +14,6 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "patient")
-/*@SecondaryTable(name="patient_detail",
-        pkJoinColumns={
-                @PrimaryKeyJoinColumn(name="CUST_ID"),
-                @PrimaryKeyJoinColumn(name="CUST_TYPE")})*/
 @OptimisticLocking
 public class Patient extends Client {
     @Id
@@ -32,20 +28,14 @@ public class Patient extends Client {
             @AttributeOverride(name = "postCode", column = @Column(name = "zipCode")),
     })
     private Address address;
-	@Formula(value =
-		"CONCAT_WS(" +
-		"	COALESCE(name, ''), " +
-		"	COALESCE(' ' + surname, ''), " +
-		"	COALESCE(' ' + gender, ''), " +
-		"	COALESCE(' ' + birthday, '') " +
-		")")
+    @Formula(value = "concat(id, address)")
 	private String fullInformation;
     @UpdateTimestamp
     private LocalDateTime updatedBy;
 
-    public Patient(String name, String surname, Gender gender, Date birthday, int age, LifeStatus lifeStatus,
-                   Address address, String fullInformation, LocalDateTime updatedBy) {
-        super(name, surname, gender, birthday, age);
+    public Patient(String name, String surname, Gender gender, Date birthday, int age, String password,
+                   LifeStatus lifeStatus, Address address, String fullInformation, LocalDateTime updatedBy) {
+        super(name, surname, gender, birthday, age, password);
         this.lifeStatus = lifeStatus;
         this.address = address;
         this.fullInformation = fullInformation;

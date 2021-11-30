@@ -1,18 +1,17 @@
 package by.itacademy.javaenterprise.goralchuk.entity.documents;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 @Data
-@MappedSuperclass
 @NoArgsConstructor
+@AllArgsConstructor
+@MappedSuperclass
 public abstract class Document {
-    @Column(name = "cardID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long numberOfDocumentInBase;
+
+    private String idCard;
 }

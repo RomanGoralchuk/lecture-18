@@ -1,22 +1,23 @@
 package by.itacademy.javaenterprise.goralchuk.entity.documents;
 
-import by.itacademy.javaenterprise.goralchuk.entity.client.Gender;
-import by.itacademy.javaenterprise.goralchuk.entity.personal.Doctor;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Convert;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
-@Entity
+@AllArgsConstructor
 @ToString(callSuper=true)
+@Entity
+@Table(name = "sickLeave")
 public class SickLeave extends Document {
     @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long numberSickLeave;
     @Convert(converter = Diagnosis.DiagnosisConverter.class)
     private Diagnosis diagnosis;
