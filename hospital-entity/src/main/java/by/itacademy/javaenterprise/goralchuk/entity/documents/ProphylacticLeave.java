@@ -16,7 +16,10 @@ import javax.persistence.*;
 public class ProphylacticLeave extends Document {
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long numberProphylacticLeave;
+    @GeneratedValue(generator = "prod-generator")
+    @GenericGenerator(name = "prod-generator",
+            parameters = @org.hibernate.annotations.Parameter(name = "prefix", value = "idCard"),
+            strategy = "by.itacademy.javaenterprise.goralchuk.generatorid.IdGenerator")
+    private String numberProphylacticLeave;
     private String description;
 }

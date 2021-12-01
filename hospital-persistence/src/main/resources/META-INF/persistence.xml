@@ -24,7 +24,10 @@
                       value="user" />
             <property name="javax.persistence.jdbc.password"
                       value="userpass" />
-            <property name="eclipselink.target-database" value="MySQL"/>
+            <property name="packagesToScan"
+                      value="by.itacademy.javaenterprise.goralchuk.entityy.*" />
+            <property name="hibernate.physical_naming_strategy"
+                      value="by.itacademy.javaenterprise.goralchuk.naming.TableNamingStrategy" />
         </properties>
     </persistence-unit>
 </persistence>

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.hibernate.annotations.Immutable;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -13,6 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString(callSuper=true)
 @Entity
+@Immutable
 @Table(name = "sickLeave")
 public class SickLeave extends Document {
     @Id
