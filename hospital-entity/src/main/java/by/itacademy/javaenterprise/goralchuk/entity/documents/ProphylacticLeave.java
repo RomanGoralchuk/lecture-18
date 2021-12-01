@@ -12,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString(callSuper=true)
 @Entity
-@Table(name = "prophylacticLeave")
+@Table(name = "prophylactic_leave")
 public class ProphylacticLeave extends Document {
     @Id
     @Column(name = "id")

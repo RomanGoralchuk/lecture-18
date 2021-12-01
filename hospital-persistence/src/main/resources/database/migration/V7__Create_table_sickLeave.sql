@@ -1,8 +1,8 @@
-CREATE TABLE sickLeave (
+CREATE TABLE sick_leave (
     id BIGINT NOT NULL AUTO_INCREMENT,
-    idCard CHAR(50) NULL DEFAULT NULL,
+    id_card CHAR(50) NULL DEFAULT NULL,
     diagnosis CHAR(100) NULL DEFAULT NULL,
-    startOfTreatment DATE NULL DEFAULT NULL,
-    endOfTreatment DATE NULL DEFAULT NULL,
+    start_of_treatment DATE NULL DEFAULT NULL,
+    end_of_treatment DATE NULL DEFAULT NULL,
     PRIMARY KEY (id) USING BTREE
 );

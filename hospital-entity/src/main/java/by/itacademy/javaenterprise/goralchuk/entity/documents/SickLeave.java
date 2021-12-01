@@ -15,7 +15,7 @@ import java.util.Date;
 @ToString(callSuper=true)
 @Entity
 @Immutable
-@Table(name = "sickLeave")
+@Table(name = "sick_leave")
 public class SickLeave extends Document {
     @Id
     @Column(name = "id")

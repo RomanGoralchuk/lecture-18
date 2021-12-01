@@ -4,6 +4,6 @@ CREATE TABLE patient (
 	surname CHAR(50) NULL DEFAULT NULL,
 	gender CHAR(50) NULL DEFAULT NULL,
 	birthday DATE NULL DEFAULT NULL,
-	lifeStatus CHAR(50) NOT NULL,
+	life_status CHAR(50) NOT NULL,
 	PRIMARY KEY (id) USING BTREE
 );
