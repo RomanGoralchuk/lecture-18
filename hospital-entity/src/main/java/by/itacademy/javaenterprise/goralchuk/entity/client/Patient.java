@@ -20,6 +20,7 @@ public class Patient extends Client {
     @Column(name = "id")
     @SequenceGenerator( name = "patientSequence", sequenceName = "PATIENT_SEQUENCE", allocationSize = 1, initialValue = 1)
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "patientSequence")
+    @Check(constraints = "id > 0")
     private Long patientIdCardNumber;
     @Convert(converter = LifeStatus.LifeStatusConverter.class)
     private LifeStatus lifeStatus = LifeStatus.ALIVE;
